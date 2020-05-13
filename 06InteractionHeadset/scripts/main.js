@@ -16,12 +16,13 @@ myOtherBox.addEventListener('mouseenter', function(){
 	rotationSpeed = 0.05;
 	console.log('entered');
 	myOtherBox.object3D.position.set(2,4,-3);
+	setTimeout(function(){myOtherBox.object3D.position.set(2,1,-3);}, 1000);
 });
 
 myOtherBox.addEventListener('mouseleave', function(){
 	rotationSpeed = 0.001;
 	console.log('left');
-	myOtherBox.object3D.position.set(2,1,-3);
+	// myOtherBox.object3D.position.set(2,1,-3);
 });
 
 
