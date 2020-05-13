@@ -21,8 +21,10 @@ myOtherBox.addEventListener('mouseenter', function(){
 	}
 	setTimeout(function() {
 		myOtherBox.object3D.position.set(2,1,-3);
-		myOtherBox.classList.remove('floating');
 		}, 1000);
+	setTimeout(function() {
+		myOtherBox.classList.remove('floating');
+		}, 2000);
 });
 
 myOtherBox.addEventListener('mouseleave', function(){
