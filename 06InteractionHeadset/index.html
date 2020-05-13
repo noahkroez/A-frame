@@ -55,7 +55,19 @@
         height="1" 
         depth="1" 
         src="#wood2"
-        shadow>  
+        shadow
+          animation__mouseenter="
+          property: components.material.material.color; 
+          type: color; 
+          to: green; 
+          startEvents: mouseenter; 
+          dur: 200;"
+        animation__mouseleave="
+          property: components.material.material.color; 
+          type: color; 
+          to: orange; 
+          startEvents: mouseleave; 
+          dur: 200;"> >  
       </a-box>
       <a-plane id="ground"
         position="0 0 -4" 
