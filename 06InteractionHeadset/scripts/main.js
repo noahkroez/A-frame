@@ -15,8 +15,14 @@ setInterval(spin, 20);
 myOtherBox.addEventListener('mouseenter', function(){
 	rotationSpeed = 0.05;
 	console.log('entered');
-	myOtherBox.object3D.position.set(2,4,-3);
-	setTimeout(function(){myOtherBox.object3D.position.set(2,1,-3);}, 1000);
+	if (!myOtherBox.classList.contains('floating')) {
+		myOtherBox.object3D.position.set(2,4,-3);
+		myOtherBox.classList.add('floating');
+	}
+	setTimeout(function() {
+		myOtherBox.object3D.position.set(2,1,-3);
+		myOtherBox.classList.remove('floating');
+		}, 1000);
 });
 
 myOtherBox.addEventListener('mouseleave', function(){
